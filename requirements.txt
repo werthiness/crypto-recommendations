@@ -1,0 +1,11 @@
+pandas
+scikit-learn
+numpy
+requests
+BeautifulSoup
+tqdm
+spacy
+ordered_set
+matplotlib
+seaborn
+yfinance
