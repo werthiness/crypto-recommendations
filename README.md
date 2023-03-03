@@ -1,5 +1,5 @@
 # Cryptocurrency Recommendations
-This project develops a cryptocurrency recommendation engine (https://cryptocurrency-recommendations.onrender.com), which recommends cryptocurrency projects for users based on what they want to invest in.
+This project develops a cryptocurrency recommendation engine (https://www.coinrex.org), which recommends cryptocurrency projects for users based on what they want to invest in.
 
 ## Data
 Data for the recommendation engine was acquired online from the following sources:
@@ -13,7 +13,7 @@ In addition, recommendations provided a link to project whitepapers (if readily 
 + [All Crypto White Papers](https://www.allcryptowhitepapers.com/)
 
 ## Pipeline
-The data processing and analysis steps of the pipeline are described more in-depth on the ["How it works"](https://cryptocurrency-recommendations.onrender.com/howitworks.html) section of the website, but here is an outline of the process and indicates the files used in each step.
+The data processing and analysis steps of the pipeline are described more in-depth on the ["How it works"](https://www.coinrex.org/howitworks.html) section of the website, but here is an outline of the process and indicates the files used in each step.
 + <b>Data Acquisition:</b> Relevant information from these sources was gathered via APIs and scraping using files in the <code>acquisition.py</code> file, and is stored in intermediate files in the coin_data folder.<br><br>
 + <b>Data Processing and Analysis:</b> Data from each source was processed by functions in the <code>feature_matrix.py</code> file. When this involves non-trivial processing of text (i.e., project descriptions), functions in <code>text_analysis.py</code> are also used.<br><br>
 + <b>Feature Matrix Construction:</b> The feature matrix was constructed from processed data using the <code>build_feature_matrix()</code> function and stored as a JSON file. Relevant information included with each recommendation (i.e., project links and whitepapers) is also stored in a JSON created by the <code>create_recommendation_json()</code> function. Both of these functions are also in the <code>feature_matrix.py</code> file.<br><br>
